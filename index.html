@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why N0T</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar with Menu and Login Buttons -->
+    <div class="top-bar">
+        <button id="menuBtn" class="menu-btn"><b>☰ MENU</b></button>
+        <button id="loginBtn" class="login-btn"><b>LOGIN</b></button>
+    </div>
+
+    <!-- Offcanvas Menu -->
+    <div id="offcanvasMenu" class="offcanvas">
+        <div class="offcanvas-header">
+            <h1>WHT N0T</h1>
+            <button id="closeBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="for-booking.html">FOR BOOKING</a></li>
+                <li><a href="sales-value.html">SALES VALUE</a></li>
+                <li><a href="queries.html">QUERIES</a></li>
+                <li><a href="customer-care.html">CUSTOMER CARE</a></li>
+                <li><a href="about-us.html">ABOUT US</a></li>
+                <li><button id="loginBtn" class="login-btn"><b>LOGIN</b></button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Welcome to the Plastic Rainwater Harvesting System</h1>
+        <p>This is a project designed to tackle the issue of plastic waste and water scarcity in Rajasthan through
+            innovative use of recycled plastics.</p>
+    </div>
+
+    <script>
+        // Offcanvas menu functionality
+        document.getElementById("menuBtn").addEventListener("click", function () {
+            document.getElementById("offcanvasMenu").style.width = "250px";
+        });
+
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("offcanvasMenu").style.width = "0";
+        });
+
+        // Login button functionality
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+
+        // Logout button functionality
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            alert("You have been logged out.");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>
